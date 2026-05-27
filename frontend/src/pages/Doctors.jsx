@@ -32,13 +32,13 @@ function SkeletonRow() {
 }
 
 export default function Doctors() {
-  const [doctors,     setDoctors]     = useState([]);
+  const [doctors, setDoctors] = useState([]);
   const [searchQuery, setSearchQuery] = useState('');
-  const [showModal,   setShowModal]   = useState(false);
-  const [form,        setForm]        = useState({ doctorName: '', specialization: '', email: '' });
+  const [showModal, setShowModal] = useState(false);
+  const [form, setForm] = useState({ doctorName: '', specialization: '', email: '' });
 
-  const [loading,   setLoading]   = useState(true);
-  const [saving,    setSaving]    = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [saving, setSaving] = useState(false);
   const [formError, setFormError] = useState('');
 
   const role = localStorage.getItem('role') || '';
@@ -63,9 +63,9 @@ export default function Doctors() {
     e.preventDefault();
     setFormError('');
 
-    if (!form.doctorName.trim())     { setFormError('Doctor name cannot be blank.');        return; }
-    if (!form.specialization.trim()) { setFormError('Specialization cannot be blank.');     return; }
-    if (!isValidEmail(form.email))   { setFormError('Please enter a valid email address.'); return; }
+    if (!form.doctorName.trim()) { setFormError('Doctor name cannot be blank.'); return; }
+    if (!form.specialization.trim()) { setFormError('Specialization cannot be blank.'); return; }
+    if (!isValidEmail(form.email)) { setFormError('Please enter a valid email address.'); return; }
 
     setSaving(true);
     try {

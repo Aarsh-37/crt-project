@@ -1,0 +1,62 @@
+# =========================
+# Spring Boot
+# =========================
+
+# Maven
+backend/target/
+backend/.mvn/wrapper/maven-wrapper.jar
+
+# Gradle
+backend/build/
+backend/.gradle/
+
+# Java
+backend/*.class
+
+# Spring Boot Logs
+backend/*.log
+backend/logs/
+backend/spring.log
+
+# Application Secrets
+backend/src/main/resources/application.properties
+backend/src/main/resources/application.yml
+backend/.env
+
+# =========================
+# React
+# =========================
+
+# Node Modules
+frontend/node_modules/
+
+# React Build
+frontend/build/
+
+# Env Files
+frontend/.env
+
+# Logs
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Coverage
+frontend/coverage/
+
+# =========================
+# IDEs
+# =========================
+
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# =========================
+# OS Files
+# =========================
+
+.DS_Store
+Thumbs.db

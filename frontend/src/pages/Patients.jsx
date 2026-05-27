@@ -7,12 +7,12 @@ export default function Patients() {
   const [searchQuery, setSearchQuery] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [form, setForm] = useState({ patientName: '', age: '', disease: '' });
-  
+
   // Status states
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [formError, setFormError] = useState('');
-  
+
   const role = localStorage.getItem('role') || '';
 
   // Load patients list from backend
@@ -91,7 +91,7 @@ export default function Patients() {
             List of registered clinic patients and diagnosed conditions
           </p>
         </div>
-        
+
         <div className="header-actions">
           {/* Client-side filter input */}
           <div className="search-container">

@@ -6,7 +6,7 @@ export default function Sidebar() {
   const navigate = useNavigate();
   const { theme, toggleTheme } = useTheme();
 
-  const role     = localStorage.getItem('role') || 'ADMIN';
+  const role = localStorage.getItem('role') || 'ADMIN';
   const username = role === 'ADMIN' ? 'Admin User' : 'Doctor User';
 
   const handleLogout = () => {
@@ -23,8 +23,8 @@ export default function Sidebar() {
           <Heart size={18} />
         </div>
         <div>
-          <div className="sidebar-title">DPMS Clinic</div>
-          <div className="sidebar-subtitle">Management System</div>
+          <div className="sidebar-title">Atleir Clinic</div>
+          <div className="sidebar-subtitle">Doctor Patient Management System</div>
         </div>
       </div>
 

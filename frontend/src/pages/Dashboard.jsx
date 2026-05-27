@@ -7,10 +7,10 @@ import {
 import api from '../api';
 
 export default function Dashboard() {
-  const [doctorCount,  setDoctorCount]  = useState(0);
+  const [doctorCount, setDoctorCount] = useState(0);
   const [patientCount, setPatientCount] = useState(0);
-  const [loading,      setLoading]      = useState(true);
-  const role     = localStorage.getItem('role') || 'ADMIN';
+  const [loading, setLoading] = useState(true);
+  const role = localStorage.getItem('role') || 'ADMIN';
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -40,8 +40,8 @@ export default function Dashboard() {
       value: loading ? null : doctorCount,
       icon: <Stethoscope size={22} />,
       color: '#6366F1',
-      bg:    'rgba(99, 102, 241, 0.12)',
-      path:  '/doctors',
+      bg: 'rgba(99, 102, 241, 0.12)',
+      path: '/doctors',
     },
     {
       id: 'patients',
@@ -49,8 +49,8 @@ export default function Dashboard() {
       value: loading ? null : patientCount,
       icon: <Users size={22} />,
       color: '#10B981',
-      bg:    'rgba(16, 185, 129, 0.12)',
-      path:  '/patients',
+      bg: 'rgba(16, 185, 129, 0.12)',
+      path: '/patients',
     },
     {
       id: 'role',
@@ -58,8 +58,8 @@ export default function Dashboard() {
       value: role,
       icon: <ShieldCheck size={22} />,
       color: '#8B5CF6',
-      bg:    'rgba(139, 92, 246, 0.12)',
-      path:  null,
+      bg: 'rgba(139, 92, 246, 0.12)',
+      path: null,
       isText: true,
     },
     {
@@ -68,8 +68,8 @@ export default function Dashboard() {
       value: 'Online',
       icon: <Activity size={22} />,
       color: '#06B6D4',
-      bg:    'rgba(6, 182, 212, 0.12)',
-      path:  null,
+      bg: 'rgba(6, 182, 212, 0.12)',
+      path: null,
       isText: true,
     },
   ];
@@ -194,17 +194,19 @@ export default function Dashboard() {
           </div>
 
           {[
-            { label: 'Active Role',   value: role,       icon: <ShieldCheck size={14} />, badge: 'badge-purple' },
-            { label: 'Doctors',       value: loading ? '…' : `${doctorCount} registered`, icon: <Stethoscope size={14} />, badge: 'badge-blue' },
-            { label: 'Patients',      value: loading ? '…' : `${patientCount} registered`, icon: <Users size={14} />, badge: 'badge-green' },
-            { label: 'Session',       value: 'Active',   icon: <CalendarDays size={14} />, badge: 'badge-cyan' },
+            { label: 'Active Role', value: role, icon: <ShieldCheck size={14} />, badge: 'badge-purple' },
+            { label: 'Doctors', value: loading ? '…' : `${doctorCount} registered`, icon: <Stethoscope size={14} />, badge: 'badge-blue' },
+            { label: 'Patients', value: loading ? '…' : `${patientCount} registered`, icon: <Users size={14} />, badge: 'badge-green' },
+            { label: 'Session', value: 'Active', icon: <CalendarDays size={14} />, badge: 'badge-cyan' },
           ].map((row) => (
             <div key={row.label} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'space-between',
               padding: '0.6rem 0', borderBottom: '1px solid var(--border)',
             }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem',
-                fontSize: '0.83rem', color: 'var(--text-muted)', fontWeight: 500 }}>
+              <div style={{
+                display: 'flex', alignItems: 'center', gap: '0.5rem',
+                fontSize: '0.83rem', color: 'var(--text-muted)', fontWeight: 500
+              }}>
                 {row.icon}
                 {row.label}
               </div>

@@ -4,11 +4,11 @@ import { LogIn, Heart, Eye, EyeOff, ShieldCheck } from 'lucide-react';
 import api from '../api';
 
 export default function Login() {
-  const [username, setUsername]   = useState('');
-  const [password, setPassword]   = useState('');
-  const [showPwd,  setShowPwd]    = useState(false);
-  const [error,    setError]      = useState('');
-  const [loading,  setLoading]    = useState(false);
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPwd, setShowPwd] = useState(false);
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
